@@ -1,0 +1,16 @@
+h1{
+	color:red;
+	background:blue;
+}
+p{
+	color:blue;
+	background:red;
+}
+div{
+	color:orange;
+	background:blue;
+}
+span{
+	color:blue;
+	background:orange;
+}

@@ -1,0 +1,42 @@
+.dn-spotlight{
+	width: 210px;	
+	min-height: 1px;
+	position: fixed;
+	z-index: 3;
+
+	&__{
+		&nav{	
+			background-color: #fff;				
+			text-align: right;
+			padding: 21px 0;
+		}
+		&title{
+			text-transform: uppercase;
+			padding: 0 21px;
+
+			&:after{
+				content: "";
+				width: 30px;
+				height: 2px;
+				background-color: #BBC0C7;
+			    display: block;
+			    margin: 18px 0 15px auto;
+			}
+		}
+		&list{
+			color: rgba(0,0,0,.4);
+			padding: 0 21px;
+			max-height: 300px;
+			overflow-y: auto;
+
+			a{
+				display: block;
+				padding: 6px 0;
+				
+				&.active{
+					color: #288CF0;
+				}
+			}	
+		}
+	}
+}

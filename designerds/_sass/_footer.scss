@@ -1,0 +1,31 @@
+.dn-footer{
+	bottom: 0;
+	height: 30px;
+	font-size: 10px;
+	background-color: #fff;
+	z-index: 9;	
+	text-transform: uppercase;	
+	
+	a{
+		&:hover{
+			border-bottom: 1px dotted;
+		}
+	}
+	&__{		
+		&nav{
+			display: inline-block;
+			vertical-align: middle;
+		 	
+		 	li{
+			 	display: inline-block;
+				vertical-align: middle;	
+				margin: 3px 6px;
+			}
+		}
+		&copy{
+			display: inline-block;
+			vertical-align: middle;
+			margin-left: 30px;
+		}
+	}
+}

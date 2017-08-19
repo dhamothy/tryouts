@@ -1,0 +1,26 @@
+.dn-icon{
+	display: inline-block;
+
+	&--{
+		&menu{
+			vertical-align: middle;
+		    padding: 21px;
+		    cursor: pointer;
+		    opacity: .8;
+		    line-height: 0;
+
+		    &:hover{
+		    	opacity: 1;
+		    }
+			&:before{
+				content: "";
+				display: inline-block;
+				width: 18px;
+			    height: 2px;
+			    background-color: rgb(142, 155, 174);
+			    border-radius: 4px;
+			    box-shadow: 0 -6px 0 rgb(142, 155, 174), 0 6px 0 rgb(142, 155, 174);
+			}
+		}
+	}
+}

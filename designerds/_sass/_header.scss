@@ -1,0 +1,26 @@
+.dn-{
+	&header{
+		width: 240px;
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		background-color: #fff;
+		z-index: 12;
+		overflow-x: hidden;
+		overflow-y: auto;		
+	}
+	&site{
+		line-height: 60px;
+		font-size: 0;
+		
+		&__{
+			&logo{
+				display: inline-block;
+				vertical-align: middle;
+				font-size: 21px;
+				line-height: 1.2;
+				margin-left: 12px;
+			}
+		}
+	}
+}

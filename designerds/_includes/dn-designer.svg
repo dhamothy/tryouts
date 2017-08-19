@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 3.7.2 (28276) - http://www.bohemiancoding.com/sketch -->
+    <title>designer</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="10" y="0" width="40" height="40"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <polygon id="path-3" points="8.79016199 8.78938349 51.2301606 22.9431288 22.9112453 51.2309391"></polygon>
+        <mask id="mask-4" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="42.4399986" height="42.4415556" fill="white">
+            <use xlink:href="#path-3"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="designer" transform="translate(-10.000000, 0.000000)" stroke="#979797">
+            <path d="M30.0159188,39.5033432 C40.5179054,39.5033432 49.5224015,30.4934102 49.5224015,20 C49.5224015,9.50658975 40.5179054,0.503972624 30.0159188,0.503972624 C19.5139322,0.503972624 10.5224015,9.50658975 10.5224015,20 C10.5224015,30.4934102 19.5139322,39.5033432 30.0159188,39.5033432 Z" id="Oval-1"></path>
+            <use id="Rectangle-1" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+            <use id="Rectangle-2" mask="url(#mask-4)" stroke-width="2" transform="translate(30.010161, 30.010161) rotate(-315.000000) translate(-30.010161, -30.010161) " xlink:href="#path-3"></use>
+        </g>
+    </g>
+</svg>

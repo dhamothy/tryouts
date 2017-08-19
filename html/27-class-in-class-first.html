@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+	<body>
+		<h1 class="heading">This is a heading.</h1>
+
+		<div class="abc">
+			<h1 class="heading">This is a heading.</h1>
+			<p>This is a paragraph</p>
+		</div>
+
+		<div class="abc">
+			<h1 class="heading">This is a heading.</h1>
+			<p>This is a  paragraph.</p>
+			<div>
+				<h1 class="heading">This is a paragraph.</h1>
+			</div>
+		</div>
+
+		<style>
+			.heading{
+				color: orange;
+			}
+			.abc{				
+				background: red;
+				color: #ffffff;
+				padding: 10px;				
+			}
+			.abc .heading{
+				color: green;
+			}
+			.abc > .heading{
+				color: yellow;
+			}
+		</style>
+	</body>
+</html>
