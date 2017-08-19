@@ -1,0 +1,59 @@
+.{$writer}-{$header}{
+	padding: 15px 0;
+	border-bottom: 1px solid #ddd;
+	font-size: 13px;
+
+	+mq(gt-sm){
+		padding: 21px 0;
+	}
+
+	&__{
+		&container{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		&brand{
+			font-weight: bold;
+			font-size: 16px;
+			line-height: 1;
+
+			+mq(gt-sm){
+				font-size: 20px;
+			}
+		}
+		&logo{
+
+		}
+		&action{
+			&s{
+				display: flex;
+				align-items: center;
+				margin-left: -18px;
+			}
+			&{
+				padding-left: 18px;
+			}
+		}
+		&subscribe{
+			text-transform: uppercase;
+			font-weight: bold;
+			cursor: pointer;
+		}
+		&search{
+			border: 1px solid transparent;
+			border-radius: 20px;
+			padding: 0;
+			background: #fff url($img_path/header/search.svg) no-repeat right 15px center;
+			width: 45px;
+			height: 30px;
+			transition: .3s;
+
+			&:focus{
+				width: 220px;
+				border-color: #eee;
+				padding: 0 42px 0 21px;
+			}
+		}
+	}
+}

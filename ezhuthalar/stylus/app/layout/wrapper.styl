@@ -1,0 +1,35 @@
+.{$writer}-{
+	&{$wrapper}{
+		min-height: 100vh;
+    	@include cn-clearfix();
+
+		&__{
+			&container{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                overflow: hidden;
+            }
+            &header{
+                flex: 0 0 auto;
+            }
+            &content{
+                flex: 1 1 auto;
+                position: relative; // need this to position inner content
+                overflow-y: auto;
+            }
+			&footer{
+				flex: 0 0 auto;
+			}
+		}
+	}
+	&{$container}{
+	    max-width: $container-width;
+	    margin-left: auto;
+	    margin-right: auto;
+	    padding-left: $container-padding;
+	    position: relative;
+	    padding-right: $container-padding
+	    clearfix();
+    }
+}

@@ -1,0 +1,213 @@
+.{$pre_global}-{$product}{
+    padding-top: 90px;
+    padding-bottom: 120px;
+
+    &__{
+        &container{
+            position: relative;
+            display: flex;
+            margin-left: -30px; //while changing this property also change in main and aside selectors
+        }
+        &main{
+			display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            max-width: 870px;
+            margin-left: 30px;
+        }
+        &aside{
+            margin-left: 30px;
+        }
+        &thumb{
+        	&s{
+				max-width: 120px;
+				width: 100%;
+    			background-color: #f2f2f5;
+        	}
+        }
+        &viewer{
+			flex: 99 0 40%;
+            overflow: hidden;
+			background-color: #e8e8e8;
+            display: flex;
+        }
+        &preview{
+            position: relative;
+            width: 100%;
+        }
+        &image{
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        &block{
+			flex: 99 0 40%;
+        }
+        &section{
+        	padding: 30px;
+
+            +mq(gt-sm){
+                padding-left: 60px;
+                padding-right: @padding-left;
+            }
+        }
+        &header{
+        	margin-bottom: 30px;
+        }
+        &misc{
+			display: flex;
+			font-size: 12px;
+			margin-bottom: 12px;
+			color: $color_muted;
+        }
+        &review,
+        &order{
+
+			&:before{
+				content: "";
+				box(6px);
+				display: inline-block;
+				border-radius: 50%;
+				background-color: $color_muted;
+				opacity: .8;
+				margin: 0 9px;
+			}
+        }
+        &title{
+        	text-transform: uppercase;
+        	font-size: 18px;
+        	margin-bottom: 12px;
+        	letter-spacing: 2px;
+        }
+        &stock{
+        	padding: 0 6px;
+        	background-color: #27bf3e;
+        	color: $color_white;
+        	height: 18px;
+        	line-height: 18px;
+        	display: inline-block;
+        	font-size: 12px;
+
+            &.out{
+                background-color: #e64949;
+            }
+        }
+        &price{
+        	margin-bottom: 42px;
+        }
+        &unit{
+            color: $color_muted;
+            font-size: 12px;
+        }
+        &desc{
+        	font-size: 12px;
+        	color: $color_muted;
+        	margin-bottom: 42px;
+        }
+        &content{
+
+        }
+        &footer{
+        }
+        &pick{
+        	&s{
+				display: flex;
+        	}
+        	&{
+        		margin-right: 15px;
+        	}
+            &.out{
+                pointer-events: none;
+                opacity: .3;
+            }
+        }
+        &size,
+        &qty{
+			box(30px);
+			line-height: 28px;
+			text-align: center;
+			border: 1px solid $color_muted;
+			background-color: $color_white;
+            font-size: 12px;
+            display: block;  //don't remove
+        }
+        &size{
+            text-transform: uppercase;
+        	margin-bottom: 6px;
+        	position: relative;
+            font-size: 10px;
+
+        	&:after{
+        		content: "";
+        		triangle-down();
+        		position: absolute;
+        		top: 100%;
+        		left: 0;
+        		right: 0;
+        		margin: 0 auto;
+        	}
+        }
+        &chart{
+			font-size: 12px;
+			margin-top: 6px;
+			display: inline-block;
+        }
+        &field{
+            &s{
+                display: flex;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                margin-top: 6px;
+            }
+            &{
+                width: (94%/2);
+                margin-top: 15px;
+            }
+        }
+        &control,
+        &btn{
+			height: 33px;
+			line-height: 28px;
+			padding: 0 12px;
+			font-size: 12px;
+			display: inline-block;
+            width: 100%;
+            border: 1px solid $color_muted;
+            background-color: $color_white;
+        }
+        &btn{
+            text-transform: uppercase;
+			border-color: $color_primary;
+			background-color: transparent;
+			text-align: center;
+			text-decoration: none;
+			color: $color_primary;
+
+			&:hover,
+			&:focus{
+				background-color: $color_primary;
+				color: $color_white;
+			}
+        }
+        &nav{
+            position: fixed;
+            top: 30px;
+            right: 30px;
+        }
+        &close{
+            cross(45px);
+            color: $color_muted;
+            border: 1px solid;
+
+            &:hover{
+                color: $color_muted;
+                background-color: $color_white;
+            }
+        }
+   	}
+}

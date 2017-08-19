@@ -1,0 +1,82 @@
+.{$pre_global}-{
+	&{$wrapper}{
+		min-height: 100vh;
+    	clearfix();
+
+		&__{
+			&container{
+                display: flex;
+                flex-direction: column;
+                height: 100vh;
+                overflow: hidden;
+            }
+            &header{
+                flex: 0 0 auto;
+            }
+            &content{
+                flex: 1 1 auto;
+                position: relative; // need this to position inner content
+                overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+			&footer{
+				flex: 0 0 auto;
+			}
+		}
+	}
+	&{$container}{
+	    container();
+    }
+    &block{
+        padding: 60px 0;
+
+        &__{
+            &container{
+                display: flex;
+            }
+            &filter{
+                max-width: 210px;
+                width: 100%;
+            }
+            &content{
+                flex: 99;
+            }
+        }
+    }
+    &section{
+        &s{
+            display: flex;
+        }
+        &{
+            flex: 1;
+            padding: 30px;
+
+            &:first-child{
+                padding-left: 0;
+            }
+            &:last-child{
+                padding-right: 0;
+            }
+
+            &__{
+                &title{
+                    text-transform: uppercase;
+                    font-family: $font_family_light;
+                    font-size: 21px;
+                    margin: 0;
+                    text-align: center;
+                    letter-spacing: 6px;
+                    //font-weight: bold;
+
+                    &:after{
+                        content: "";
+                        box(42px, 2px);
+                        background: $color_muted;
+                        margin: 21px auto 42px;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

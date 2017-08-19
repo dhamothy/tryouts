@@ -1,0 +1,180 @@
+.{$pre_global}-{$reach}{
+	padding-top: 150px;
+	padding-bottom: @padding-top;
+
+	&__{
+		&container{
+			background-color: #01242f;
+			background-repeat: no-repeat;
+			background-position: center;
+			background-size: cover;
+			background-image url('../images/reach/cover.jpg');
+			color: $color_white;
+			font-size: 14px;
+			min-height: 390px;
+			position: relative;
+
+			&:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				background-color: rgba(#000,.1);
+				z-index: 90;
+			}
+		}
+		&section{
+			&s{
+				display: flex;
+				position: relative;
+				z-index: 190;
+			}
+			&{
+				padding: 0 45px;
+				flex: 1;
+
+				&:first-child{
+	                padding-left: 0;
+	            }
+	            &:last-child{
+	                padding-right: 0;
+	            }
+			}
+		}
+		&header{
+			font-size: 21px;
+			font-family: $font_family_light;
+    		text-transform: uppercase;
+    		margin-bottom: 30px;
+		}
+		&content{
+
+		}
+		&brand{
+			padding-top: 60px;
+			padding-bottom: @padding-top;
+		}
+		&quote{
+			flex: 1.5;
+		}
+		&security{
+			padding-top: 60px;
+			padding-botom: @padding-top;
+		}
+	}
+}
+//reach
+.sr{
+	&-{
+		&brand{
+			&__{
+				&logo{
+					font-size: 21px;
+					font-family: $font_family_light;
+					text-transform: uppercase;
+					margin-bottom: 30px;
+				}
+				&address,
+				&phone,
+				&mail{
+					position: relative;
+					margin-bottom: 21px;
+					padding-left: 30px;
+
+					[class^="icon-"]{
+						position: absolute;
+						top: 0;
+						left: 0;
+						font-size: 18px;
+					}
+				}
+				&social{
+					margin-top: 60px;
+
+					a{
+						color: currentColor!important;
+						font-size: 18px;
+					}
+				}
+			}
+		}
+		&quote{
+			margin-top: -90px;
+			margin-bottom: @margin-top;
+		    padding: 30px;
+		    background: rgba(0, 0, 0, 0.8);
+		    font-size: 16px;
+
+		    &__{
+		    	&header{
+		    		font-size: 21px;
+		    		font-family: $font_family_light;
+		    		text-transform: uppercase;
+		    		margin-bottom: 30px;
+		    		display: flex;
+		    		justify-content: space-between;
+
+		    		[class^="icon-"]{
+		    			font-size: 21px;
+		    		}
+		    	}
+		    	&field{
+		    		& ~ &{
+		    			margin-top: 30px;
+		    		}
+		    	}
+		    	&control{
+		    		border-width: 0;
+		    		border-bottom: 1px solid $color_muted;
+		    		height: 60px;
+		    		line-height: @height - 1;
+		    		padding: 0 21px 0 3px;
+		    		background-color: transparent;
+		    		width: 100%;
+		    		color: $color_white;
+		    		transition: border-color .2s;
+
+		    		textarea&{
+		    			height: auto;
+		    			line-height: 1.5;
+		    			min-height: 120px;
+		    		}
+		    		&:focus{
+		    			border-color: $color_white;
+		    		}
+		    	}
+		    	&error{
+		    		color: #f74747;
+		    	}
+		    	&button{
+		    		display: inline-block;
+		    		width: 100%;
+		    		background-color: $color_muted;
+		    		border-width: 0;
+		    		height: 60px;
+		    		line-height: @height;
+		    		color: $color_white;
+		    		padding: 0 30px;
+		    		font-size: 21px;
+		    		font-family: $font_family_light;
+		    		text-transform: uppercase;
+		    		transition: background-color .3s;
+		    		letter-spacing: 3px;
+
+		    		&:hover,
+		    		&:focus{
+		    			background-color: $color_primary;
+		    		}
+		    	}
+		    }
+		}
+		&security{
+
+		}
+		&social{
+
+		}
+	}
+}

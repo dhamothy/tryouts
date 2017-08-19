@@ -1,0 +1,220 @@
+<!doctype html>
+<html>
+    <head>
+    	<title>Sushil</title>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="dist/fontello/css/fontello.css">
+        <link rel="stylesheet" href="dist/css/slick.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+    </head>
+    <body>
+        <div class="sg-wrapper">
+            <div class="sg-wrapper__container">
+                <div class="sg-wrapper__header">
+                    <header class="sg-header">
+                        <div class="sg-header__container">
+                            <div class="sg-header__brand">
+                                <a href="/" class="sg-header__logo">
+                                    <img src="assets/images/brand/logo-black.png" alt="Sushil" width="69">
+                                    Sushil
+                                </a>
+                            </div>
+                            <div class="sg-header__nav">
+                                <nav class="sg-nav">
+                                    <div class="sg-nav__list">
+                                        <a class="sg-nav__item" href="#new-and-upcoming">New Arrivals</a>
+                                        <a class="sg-nav__item" href="#new-and-upcoming">Upcoming Designs</a>
+                                        <a class="sg-nav__item" href="#about">About</a>
+                                        <a class="sg-nav__item" href="#gallery">Gallery</a>
+                                        <a class="sg-nav__item" href="#contact">Contact</a>
+                                    </div>
+                                </nav>
+                            </div>
+                            <div class="sg-header__fluid"></div>
+                            <div class="sg-header__reach">
+                                <div class="sg-header__contact">
+                                    <a class="sg-header__quote" href="#contact">Get a quote</a>
+                                    <a class="sg-header__fb"><span class="icon-facebook-squared"></span></a>
+                                    <a class="sg-header__twit"><span class="icon-twitter-squared"></span></a>
+                                    <a class="sg-header__gp"><span class="icon-gplus-squared"></span></a>
+                                    <a class="sg-header__pin"><span class="icon-pinterest-squared"></span></a>
+                                    <a class="sg-header__phone"><span class="icon-phone-squared"></span></a>
+                                    <a class="sg-header__mail"><span class="icon-mail-squared"></span></a>
+                                </div>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <div class="sg-wrapper__content">
+                    <!-- banner -->
+                    <section class="sg-contact">
+                        <div class="sg-contact__container">
+                        	<div class="sg-contact__map" id="sg-map"></div>
+                            <div class="sg-container">
+                                <div class="sg-contact__box">
+                                    <div class="sg-contact__way">
+                                        <div class="sg-contact__title">Contact Us</div>
+                                        <div class="so-brand">
+                                            <address class="so-brand__address">
+                                                <span class="icon-location"></span>
+                                                11, A-Block, West wing<br>
+                                                Perungudi, Chennai - 600 096<br>
+                                                TN, India.
+                                            </address>
+                                            <div class="so-brand__phone">
+                                                <span class="icon-phone"></span>+91 89898 98989
+                                            </div>
+                                            <div class="so-brand__mail">
+                                                <span class="icon-mail-alt" style="font-size: 15px;left:3px;"></span>hello@brand.com
+                                            </div>
+                                            <div class="so-brand__social">
+                                            <a class="so-brand__fb"><span class="icon-facebook"></span></a>
+                                                <a class="so-brand__twit"><span class="icon-twitter"></span></a>
+                                                <a class="so-brand__gp"><span class="icon-gplus"></span></a>
+                                                <a class="so-brand__pin"><span class="icon-pinterest"></span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <form class="sg-contact__form">
+                                        <div class="sg-contact__title">Get in Touch</div>
+                                        <div class="sg-contact__field">
+                                            <input type="text" class="sg-contact__control" placeholder="Name">
+                                            <div class="sg-contact__error"></div>
+                                        </div>
+                                        <div class="sg-contact__field">
+                                            <input type="text" class="sg-contact__control" placeholder="Phone Number">
+                                            <div class="sg-contact__error"></div>
+                                        </div>
+                                        <div class="sg-contact__field">
+                                            <input type="text" class="sg-contact__control" placeholder="E-Mail id">
+                                            <div class="sg-contact__error"></div>
+                                        </div>
+                                        <div class="sg-contact__field">
+                                            <textarea class="sg-contact__control" placeholder="Your message..."></textarea>
+                                            <div class="sg-contact__error"></div>
+                                        </div>
+                                        <div class="sg-contact__field">
+                                            <input type="submit" value="Send" class="sg-contact__button">
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!--  -->
+                    <footer class="sg-footer">
+                        <div class="sg-container">
+                            <div class="sg-footer__container">
+                                <div class="sg-footer__nav">
+                                    <a class="sg-footer__item" href="/">Home</a>
+                                    <a class="sg-footer__item" href="#new-and-upcoming">New Arrivals</a>
+                                    <a class="sg-footer__item" href="#gallery">Gallery</a>
+                                </div>
+                                <div class="sg-footer__xtra">
+                                    Designed with <span style="color:#f74747;">&hearts;</span>
+                                </div>
+                            </div>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+        </div>
+        <script src="dist/js/jquery-1.11.3.min.js"></script>
+        <script src="dist/js/slick.min.js"></script>
+        <script src="assets/js/main.js"></script>
+	    <script>
+	      function initMap() {
+	        // Styles a map in night mode.
+	        var map = new google.maps.Map(document.getElementById('sg-map'), {
+	          center: {lat: 12.9830246, lng: 80.2243806},
+	          zoom: 12,
+	          styles: [
+	            {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
+	            {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
+	            {elementType: 'labels.text.fill', stylers: [{color: '#746855'}]},
+	            {
+	              featureType: 'administrative.locality',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'poi',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'poi.park',
+	              elementType: 'geometry',
+	              stylers: [{color: '#263c3f'}]
+	            },
+	            {
+	              featureType: 'poi.park',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#6b9a76'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'geometry',
+	              stylers: [{color: '#38414e'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'geometry.stroke',
+	              stylers: [{color: '#212a37'}]
+	            },
+	            {
+	              featureType: 'road',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#9ca5b3'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'geometry',
+	              stylers: [{color: '#746855'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'geometry.stroke',
+	              stylers: [{color: '#1f2835'}]
+	            },
+	            {
+	              featureType: 'road.highway',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#f3d19c'}]
+	            },
+	            {
+	              featureType: 'transit',
+	              elementType: 'geometry',
+	              stylers: [{color: '#2f3948'}]
+	            },
+	            {
+	              featureType: 'transit.station',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#d59563'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'geometry',
+	              stylers: [{color: '#17263c'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'labels.text.fill',
+	              stylers: [{color: '#515c6d'}]
+	            },
+	            {
+	              featureType: 'water',
+	              elementType: 'labels.text.stroke',
+	              stylers: [{color: '#17263c'}]
+	            }
+	          ]
+	        });
+	      }
+	    </script>
+	    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBWKHqb-bjdEnWliXLd7_JLlJAVKoQuk38&callback=initMap"
+	    async defer></script>
+	</body>
+</html>

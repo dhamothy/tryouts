@@ -1,0 +1,138 @@
+.slick{
+
+	&-{
+		&gallery{
+
+			& ^[0]{
+				&-{
+					&product{
+						height: 300px;
+						position: relative;
+						background-position: top center;
+						background-repeat: no-repeat;
+						background-size: cover;
+						color: $color_white!important;
+						display: flex;
+						align-items: flex-end;
+
+						&:after{
+							content: "";
+							position absolute;
+							top: 0;
+							right: 0;
+							bottom: 0;
+							left: 0;
+							z-index: 80;
+							background-color: rgba(#000,.01);
+							transition: background-color .2s;
+						}
+						&:hover{
+
+							&:after{
+								background-color: rgba(#000,.5);
+							}
+						}
+					}
+					&content{
+						position: relative;
+						z-index: 180;
+						padding: 21px;
+						max-width: 240px;
+					}
+					&title{
+						text-transform: uppercase;
+			            font-size: 14px;
+			            margin: 0;
+			            letter-spacing: 1.5px;
+
+			            &:after{
+			                content: "";
+			                box(15px, 1px);
+			                background: $color_white;
+			                margin: 6px 0 12px;
+			                display: block;
+			            }
+					}
+					&desc{
+						font-family: $font_family_light;
+					}
+					&hint{
+						margin: 24px 0;
+						text-align: center;
+						font-style: italic;
+						color: $color_muted;
+						display: none;
+
+						+mq(sm){
+							display: block;
+						}
+					}
+					&arrow{
+						background-color: transparent;
+						border: 1px solid #fff;
+						box(42px);
+						line-height: 40px;
+						text-align: center;
+						color: #fff;
+						position: absolute;
+						top: 120px;
+						font-size: 0;
+						z-index: 290;
+
+						&:hover{
+							background-color: $color_white;
+							color: $color_muted;
+						}
+
+						+mq(sm){
+							display: none!important;
+						}
+					}
+					&prev{
+						left: -1px;
+
+						&:after{
+							content: "\2190";
+			    			font-size: 16px;
+						}
+					}
+					&next{
+						right: -1px;
+
+						&:after{
+							content: "\2192";
+							font-size: 16px;
+						}
+					}
+					&disabled{
+						opacity: 0;
+						visibility: hidden;
+						cursor: not-allowed;
+					}
+					&dots{
+						text-align: center;
+						margin-top: 21px;
+
+						li{
+							display: inline-block;
+							margin: 0 3px;
+						}
+						button{
+							background-color: transparent;
+							border: 1px solid $color_muted;
+							box(30px);
+							line-height: 28px;
+							text-align: center;
+							color: $color_muted;
+							font-size: 11px;
+						}
+						// ^[0]-active button{
+						// 	background-color: $color_muted;
+						// 	color: $color_white;
+						// }
+					}
+				}
+			}
+		}
+	}
+}

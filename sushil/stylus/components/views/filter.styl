@@ -1,0 +1,54 @@
+.{$pre_global}-{$filter}{
+	&s{
+
+	}
+	&{
+		margin-bottom: 45px;
+	}
+	&__{
+		&container{
+
+		}
+		&header{
+			margin-bottom: 15px;
+		}
+		&title{
+			font-size: 10px;
+			text-transform: uppercase;
+			color: $color_muted;
+			letter-spacing: 3px;
+		}
+		&content{
+
+		}
+		&list{
+
+		}
+		&item{
+			display: flex;
+			padding: 6px 0;
+			color: $color_black;
+			position: relative;
+
+			&:hover,
+			&:focus{
+				color: $color_primary;
+			}
+			&.current{
+				color: $color_primary;
+
+				&:before{
+					content: "";
+					box(9px);
+					display: block;
+				    border: 1.5px solid;
+				    position: absolute;
+				    left: -18px;
+				    top: 0;
+				    bottom: 0;
+				    margin: auto 0;
+				}			
+			}
+		}
+	}
+}

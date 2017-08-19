@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Untitled</title>
+    </head>
+    <body>
+
+    	<!-- <great-apes>hello world</great-apes> -->
+
+        <table is="great-apes"></table>
+
+		<!-- </great-apes> -->
+
+		<script type="text/javascript">
+			//regiser a element
+			//document.registerElement('great-apes');
+
+			var apeProto = Object.create(HTMLElement.prototype);
+			apeProto.hoot = function() {
+				console.log('Apes are great!');
+			}
+
+			apeProto.appendDiv = function() {
+
+			}
+
+			document.registerElement('great-apes', {
+			  prototype: apeProto,
+			  extends: 'table'
+			});
+
+			var apes = document.querySelector('[is=great-apes]');
+			apes.hoot();
+
+		</script>
+    </body>
+</html>

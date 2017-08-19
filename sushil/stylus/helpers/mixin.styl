@@ -1,0 +1,226 @@
+//------------------------------------------------------------------------------
+//  clearfix
+//------------------------------------------------------------------------------
+clearfix() {
+    &:before,
+    &:after{
+        content: "";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+//------------------------------------------------------------------------------
+//  horizontal line
+//------------------------------------------------------------------------------
+hr(){
+    border-width: 0;
+    height: 1px;
+    background-color: $border_color_base;
+    overflow: visible;
+}
+
+//------------------------------------------------------------------------------
+//  box dimesion
+//------------------------------------------------------------------------------
+box($width, $height = $width){
+    width: $width;
+    min-width: $width;
+    height: $height;
+}
+
+//------------------------------------------------------------------------------
+//  triangle arrow
+//------------------------------------------------------------------------------
+//up
+triangle-up($base=4px, $height=$base, $color=inherit){
+    width: 0;
+    height: 0;
+    border-left: $base solid transparent;
+    border-right: $base solid transparent;
+    border-bottom: $height solid;
+    border-bottom-color: $color;
+}
+//down
+triangle-down($base=4px, $height=$base, $color=inherit){
+    width: 0;
+    height: 0;
+    border-left: $base solid transparent;
+    border-right: $base solid transparent;
+    border-top: $height solid;
+    border-top-color: $color;
+}
+//left
+triangle-left($base=4px, $height=$base, $color=inherit){
+    width: 0;
+    height: 0;
+    border-bottom: $base solid transparent;
+    border-top: $base solid transparent;
+    border-right: $height solid;
+    border-right-color: $color;
+}
+//right
+triangle-right($base=4px, $height=$base, $color=inherit){
+    width: 0;
+    height: 0;
+    border-bottom: $base solid transparent;
+    border-top: $base solid transparent;
+    border-left: $height solid;
+    border-left-color: $color;
+}
+//------------------------------------------------------------------------------
+//  cross(x)
+//------------------------------------------------------------------------------
+cross($size=12px, $depth=1px, $color=currentColor, $color_hover=currentColor){
+    position: relative;
+    display: inline-block;
+    width: $size;
+    height: $size;
+    overflow: hidden;
+    cursor: pointer;
+    color: $color;
+    font-size: 0;
+    line-height: 0;
+
+    &:before,
+    &:after {
+        content: '';
+        position: absolute;
+        height: $depth;
+        width: 100%;
+        top: 50%;
+        left: 0;
+        margin-top: -($depth/2);
+        background: currentColor;
+    }
+    &:before {
+        transform: rotate(45deg);
+    }
+    &:after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        color: $color_hover;
+    }
+}
+//------------------------------------------------------------------------------
+//  avatar
+//------------------------------------------------------------------------------
+avatar($size){
+    width: $size;
+    min-width: $size;
+    height: $size;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    background-color: #eee;
+    display: inline-block;
+    line-height: 0;
+    font-size: 0;
+    border-radius: 50%;
+}
+//------------------------------------------------------------------------------
+//  container
+//------------------------------------------------------------------------------
+container(){
+    max-width: $container_width;
+    padding-left: $container_space;
+    padding-right: $container_space;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    clearfix();
+}
+//------------------------------------------------------------------------------
+//  title
+//------------------------------------------------------------------------------
+title(){
+    font-family: $font_family_bold;
+    font-size: 14px;
+    color: $color_brand;
+    font-weight: bold;
+}
+//------------------------------------------------------------------------------
+//  form
+//------------------------------------------------------------------------------
+form-control($space=$form_control_space){
+    padding: 0 $space;
+    height: $form_control_height;
+    line-height: $form_control_height - 2;     //border-width has to be subract
+    border: 1px solid $form_control_border;
+    background-color: $form_control_bg;
+    background-repeat: no-repeat;
+    color: $form_control_color;
+    font-size: $form_control_font_size;
+    border-radius: $form_control_radius;
+    width: 100%;
+    font-weight: 600;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+form-control-focus(){
+    border-color: $form_control_border_focus;
+    box-shadow: $form_control_shadow_focus;
+}
+form-help(){
+    color: $form_help_color;
+    font-style: italic;
+    margin-top: 12px;
+    font-size: $font_size_st;
+    line-height: $font_size_st + 5;
+}
+
+//------------------------------------------------------------------------------
+//  Media Queries based on the viewport
+//------------------------------------------------------------------------------
+//mq = media query
+
+mq($point) {
+    $xs = 500px;
+    $sm = 768px;
+    $md = 992px;
+    $lg = 1200px;
+    $xl = 1480px;
+
+    if $point == xs {
+        @media (max-width: $xs - 1) {
+            {block}
+        }
+    }
+    if $point == gt-xs {
+        @media (min-width: $xs) {
+            {block}
+        }
+    }
+    if $point == sm {
+        @media (max-width: $sm - 1) {
+            {block}
+        }
+    }
+    if $point == gt-sm {
+        @media (min-width: $sm) {
+            {block}
+        }
+    }
+    if $point == md {
+        @media (max-width: $md - 1) {
+            {block}
+        }
+    }
+    if $point == gt-md {
+        @media (min-width: $md) {
+            {block}
+        }
+    }
+    if $point == lg {
+        @media (max-width: $lg - 1) {
+            {block}
+        }
+    }
+    if $point == gt-lg {
+        @media (min-width: $lg) {
+            {block}
+        }
+    }
+}
